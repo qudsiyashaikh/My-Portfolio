@@ -1,0 +1,9 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Freeman&family=Poppins:ital,wght@0,400;1,700&display=swap');@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+font-family: 'poppins' , sans-serif;
+background-color: #f2f2f2;
+}
