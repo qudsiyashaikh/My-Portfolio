@@ -1,10 +1,11 @@
 import React from 'react'
 import Navbar from "./Components/Navbar"
 import Home from "./Components/Home"
-import Skill from './Components/Skill';
+import About from "./Components/About"
+import Skills from './Components/Skills';
 import Project from './Components/Project';
 import { FaCertificate } from 'react-icons/fa6';
-import Certificat from './Components/Certificat';
+import Experience from './Components/Experience';
 import Contacts from './Components/Contacts'
 import Footer from './Components/Footer';
 // import Toaster from 'react-hot-toast'
@@ -15,9 +16,10 @@ function Portfolio() {
         <div className=' bg-gradient-to-r from-purple-900 to-pink-400'>
           <Navbar />
           <Home />
-          <Skill />
+          <About/>
+          <Skills/>
           <Project />
-          <Certificat />
+          <Experience />
           <Contacts />
           <Footer />
 

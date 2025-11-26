@@ -1,135 +1,186 @@
-import React, { useState } from "react";
-import { projects } from '../Constants'
+import React from "react";
+import bgi from "../assets/bgi.png";
+import myportfolioimg from "../assets/myportfolioimg.png";
+import password from "../assets/password generater.png";
+import husani from "../assets/husani family resturant.png";
 
-const Work = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
-
-  const handleOpenModal = (project) => {
-    setSelectedProject(project);
-  };
-
-  const handleCloseModal = () => {
-    setSelectedProject(null);
-  };
-
+const Projects = () => {
   return (
-    <section
-      id="Project"
-      className="max-w-screen-2xl container mx-auto px-4 md:px-20 mt-10"
-    >
-      {/* Section Title */}
-      <div className=" mb-16">
-        <h6 className="  text-2xl underline font-semibold"><span>&lt;</span>
-          Project
-          <span>/</span>
-          <span>&gt;</span>
-        </h6>
-        <p className="text-black mt-4 text-lg font-semibold">
-          A showcase of the projects I have worked on, highlighting my skills
-          and experience in various technologies.
-        </p>
-      </div>
+    <>
+      <section
+        id="projects"
+        className="projects-section py-20 text-white text-center bg-[#0F0B28]"
+      >
+        {/* Section Title */}
+        <h2 className="text-[38px] mb-10 text-[#b983ff]">Featured Projects</h2>
 
-      {/* Projects Grid */}
-      <div className="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            onClick={() => handleOpenModal(project)}
-            className="border border-white bg-gray-900 backdrop-blur-md rounded-2xl shadow-2xl overflow-hidden cursor-pointer hover:shadow-purple-500/50 hover:-translate-y-2 transition-transform duration-300"
-          >
-            <div className="p-4">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover rounded-xl"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-2xl font-bold text-white mb-2">
-                {project.title}
-              </h3>
-              <p className="text-gray-500 mb-4 pt-4 line-clamp-3">
-                {project.description}
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-[90%] mx-auto">
+          {/* Project 1 */}
+          <div className="project-card bg-white/5 border border-white/10 rounded-2xl overflow-hidden pb-5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(120,44,255,0.5)]">
+            <img src={bgi} alt="BMI Calculator" className="w-full border-b border-white/10" />
+
+            <div className="p-5 text-left">
+              <h3 className="text-[22px] mb-2 text-[#c8a4ff]">BMI Calculator</h3>
+              <p className="text-[#ccc] text-[15px] mb-4">
+                This is a simple BMI Calculator built using React.js. The user inputs weight & height and gets BMI.
               </p>
-              <div className="mb-4">
-                {project.tags.map((tag, index) => (
+
+              <div className="mb-4 flex flex-wrap gap-2">
+                {["Html5", "Css3", "Javascript", "React.js"].map((tag, idx) => (
                   <span
-                    key={index}
-                    className="inline-block bg-[#7356d1] text-xs font-semibold text-purple-900 rounded-full px-2 py-1 mr-2 mb-2"
+                    key={idx}
+                    className="bg-[#9063ff33] border border-[#a97fff] px-3 py-1 rounded-full text-[13px] text-[#d8c6ff]"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
+
+              <div className="project-links flex gap-4">
+                <a
+                  href="https://bmi-calculator-gamma-sepia.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#a97fff] text-[20px] hover:text-[#d5b6ff]"
+                >
+                  🌐
+                </a>
+
+                <a
+                  href="https://github.com/qudsiyashaikh/BMI-Calculator-.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#a97fff] text-[20px] hover:text-[#d5b6ff]"
+                >
+                  🐱‍💻
+                </a>
+              </div>
             </div>
           </div>
-        ))}
-      </div>
 
-      {/* Modal Container */}
-      {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 p-4">
-          <div className="bg-gray-900 rounded-xl shadow-2xl lg:w-full w-[90%] max-w-3xl overflow-hidden relative">
-            <div className="flex justify-end p-4">
-              <button
-                onClick={handleCloseModal}
-                className="text-white text-6xl font-bold hover:text-black"
-              >
-                &times;
-              </button>
-            </div>
+          {/* Project 2 */}
+          <div className="project-card bg-white/5 border border-white/10 rounded-2xl overflow-hidden pb-5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(120,44,255,0.5)]">
+            <img src={myportfolioimg} alt="Portfolio Website" className="w-full border-b border-white/10" />
+            <div className="p-5 text-left">
+              <h3 className="text-[22px] mb-2 text-[#c8a4ff]">Portfolio Website</h3>
+              <p className="text-[#ccc] text-[15px] mb-4">
+                A modern portfolio website showcasing my skills, projects, and resume.
+              </p>
 
-            <div className="flex flex-col">
-              <div className="w-full flex justify-center bg-gray-900 px-4">
-                <img
-                  src={selectedProject.image}
-                  alt={selectedProject.title}
-                  className="lg:w-full w-[95%] object-contain rounded-xl shadow-2xl"
-                />
+              <div className="mb-4 flex flex-wrap gap-2">
+                {["HTML", "Tailwind", "Javascript", "React.js"].map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-[#9063ff33] border border-[#a97fff] px-3 py-1 rounded-full text-[13px] text-[#d8c6ff]"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
-              <div className="lg:p-8 p-6">
-                <h3 className="lg:text-3xl font-bold text-white mb-4 text-md">
-                  {selectedProject.title}
-                </h3>
-                <p className="text-gray-400 mb-6 lg:text-base text-xs">
-                  {selectedProject.description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {selectedProject.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="bg-[#251f38] text-xs font-semibold text-purple-500 rounded-full px-2 py-1"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-4">
-                  <a
-                    href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-1/2 bg-gray-800 hover:bg-black text-gray-400 lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center"
+
+              <div className="project-links flex gap-4">
+                <a className="text-[#a97fff] text-[20px] hover:text-[#d5b6ff]" href="#">
+                  🌐
+                </a>
+                <a className="text-[#a97fff] text-[20px] hover:text-[#d5b6ff]" href="#">
+                  🐱‍💻
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 3 */}
+          <div className="project-card bg-white/5 border border-white/10 rounded-2xl overflow-hidden pb-5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(120,44,255,0.5)]">
+            <img src={password} alt="Password Generator" className="w-full border-b border-white/10" />
+            <div className="p-5 text-left">
+              <h3 className="text-[22px] mb-2 text-[#c8a4ff]">Password Generator</h3>
+              <p className="text-[#ccc] text-[15px] mb-4">
+                A strong password generator with options like uppercase, length, symbols & numbers.
+              </p>
+
+              <div className="mb-4 flex flex-wrap gap-2">
+                {["Html", "Tailwind CSS", "JavaScript", "React.js", "MySQL"].map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-[#9063ff33] border border-[#a97fff] px-3 py-1 rounded-full text-[13px] text-[#d8c6ff]"
                   >
-                    View Code
-                  </a>
-                  <a
-                    href={selectedProject.webapp}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-1/2 bg-purple-600 hover:bg-black text-white lg:px-6 lg:py-2 px-2 py-1 rounded-xl lg:text-xl text-sm font-semibold text-center"
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="project-links flex gap-4">
+                <a
+                  href="https://password-generator-react-js-psi.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#a97fff] text-[20px] hover:text-[#d5b6ff]"
+                >
+                  🌐
+                </a>
+                <a
+                  href="https://github.com/qudsiyashaikh/Password-Generator-React.js.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#a97fff] text-[20px] hover:text-[#d5b6ff]"
+                >
+                  🐱‍💻
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Project 4 */}
+          <div className="project-card bg-white/5 border border-white/10 rounded-2xl overflow-hidden pb-5 transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(120,44,255,0.5)]">
+            <img src={husani} alt="Husaini Restaurant" className="w-full border-b border-white/10" />
+            <div className="p-5 text-left">
+              <h3 className="text-[22px] mb-2 text-[#c8a4ff]">Husaini Family Restaurant</h3>
+              <p className="text-[#ccc] text-[15px] mb-4">
+                A stylish restaurant website made using Next.js + TypeScript + Tailwind.
+              </p>
+
+              <div className="mb-4 flex flex-wrap gap-2">
+                {["Next.js", "TypeScript", "Tailwind CSS", "React Icons"].map((tag, idx) => (
+                  <span
+                    key={idx}
+                    className="bg-[#9063ff33] border border-[#a97fff] px-3 py-1 rounded-full text-[13px] text-[#d8c6ff]"
                   >
-                    View Live
-                  </a>
-                </div>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="project-links flex gap-4">
+                <a
+                  href="https://restaurant-next-js-mauve.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#a97fff] text-[20px] hover:text-[#d5b6ff]"
+                >
+                  🌐
+                </a>
+                <a
+                  href="https://github.com/qudsiyashaikh/Restaurant-next.js.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#a97fff] text-[20px] hover:text-[#d5b6ff]"
+                >
+                  🐱‍💻
+                </a>
               </div>
             </div>
           </div>
         </div>
-      )}
-    </section>
+         {/* Divider */}
+      <div className="text-center text-purple-400 text-xl tracking-[10px] mt-20">
+        ••••••••••
+      </div>
+      </section>
+
+     
+    </>
   );
 };
 
-export default Work;
+export default Projects;

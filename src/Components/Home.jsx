@@ -1,94 +1,79 @@
-import React from 'react'
-import Pic from "../Components/Images/IMG_20240909_192307.jpg"
-import { MdWhatshot } from "react-icons/md";
+import React from "react";
 import { LiaLinkedinIn } from "react-icons/lia";
-import { FaSquareInstagram } from "react-icons/fa6";
-import { FaTelegramPlane } from "react-icons/fa";
 import { RxGithubLogo } from "react-icons/rx";
-import Tilt from 'react-parallax-tilt'
-function Home() {
+
+function HomeSection() {
   return (
     <>
-      <div
-        name="Home"
-        className=" max-w-screen-2xl container mx-auto px-4 md:px-20 my-28">
-        <div className="flex flex-col  md:flex-row">
-          <div className='md:w-1/2  mt-12 md:mt-24 space-y-2 order-2 md:order-1 '>
-            <span className="text-xl">  Welcome In My Portfolio</span>
-           
-            <div className="flex space-x-1 text-2xl md:text-4xl">
-              <h1 className=' bg-gradient-to-r from-purple-600 to-pink-500 py-3  font-semibold rounded-xl hover:opacity-90 transition'> Hellow, I'm Qudsiya Shaikh</h1>
-              
+      {/* HOME SECTION */}
+      <section
+        id="home"
+        className="pt-40 pb-20 text-center bg-[#0F0B28] text-white"
+      >
+        {/* Small Heading */}
+        <h2 className="text-purple-400 text-3xl font-semibold">
+          Hello, I'm
+        </h2>
 
+        {/* Name */}
+        <h1 className="text-5xl md:text-7xl font-extrabold mt-4 tracking-wide">
+          Qudsiya ZamZam
+        </h1>
 
-            </div>
+        {/* Role */}
+        <h3 className="text-xl md:text-2xl font-semibold mt-4 text-purple-200">
+          Full Stack Web & App Developer
+        </h3>
 
-            <p className="text-sm md:text-md text-bold text-justify"> Front-end Web Developer</p>
+        {/* Description */}
+        <p className="max-w-2xl mx-auto mt-8 text-lg text-gray-300 leading-relaxed">
+          Transforming creative ideas into high-performing, visually engaging,
+          and user-focused web experiences.
+        </p>
 
-            <br />
-            <p>Hi! I’m Qudsiya ZamZam, a passionate and dedicated front-end developer from Akola, Maharashtra. With a strong foundation in HTML, CSS, JavaScript, and React.js, I love transforming creative ideas into clean, responsive, and user-friendly web interfaces.
+        {/* Buttons */}
+        <div className="flex justify-center gap-6 mt-10">
+          <a
+            href="/myresume.docx"
+            download
+            className="bg-purple-600 text-white px-8 py-4 rounded-xl text-lg font-medium shadow-lg hover:bg-purple-700 transition"
+          >
+            Download Resume
+          </a>
 
-              I’m organized, efficient, and always eager to learn new technologies that enhance my craft. My goal is to create seamless digital experiences that not only look good but also perform exceptionally well.</p>
-            <br />
-            {/* social icons */}
-            <div className="flex flex-col  items-center md:flex-row justify-between space-y-6 md:space-y-0">
-              <div className="  space-y-2">
-                <h1 className="  flex font-bold flex-col text-center ">Reach Out</h1>
-                <ul className="flex space-x-5">
-
-                  <li>
-                    <a href="https://web.whatsapp.com/" target="_blank">
-                      <MdWhatshot className="text-4xl cursor-pointer" />
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="https://www.linkedin.com/feed/" target="_blank">
-                      <LiaLinkedinIn className="text-4xl cursor-pointer" />
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="https://www.instagram.com/qudsiya__shaikh/saved/" target="_blank">
-                      <FaSquareInstagram className="text-4xl cursor-pointer" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://web.telegram.org/k/" target="_blank">
-                      <FaTelegramPlane className="text-4xl cursor-pointer" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/" target="_blank">
-                      < RxGithubLogo className="text-4xl cursor-pointer" />
-                    </a>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-
-          </div>
-          <div className='md:w-1/2  md:ml-48 md:mt-20 mt-8 order-1 '>
-            <Tilt
-
-              tiltMaxAngleX={20}
-              tiltMaxAngleY={20}
-              perspective={1000}
-              scale={1.05}
-              transitionSpeed={1000}
-              gyroscope={true}
-            >
-              <img src={Pic} className="rounded-xl md:w-[350px] md:h-[400px] "
-                alt="" />
-            </Tilt>
-          </div>
-
+          <a
+            href="#contact"
+            className="border-2 border-purple-500 text-purple-300 px-8 py-4 rounded-xl text-lg font-medium hover:bg-purple-600 hover:text-white transition"
+          >
+            Get In Touch
+          </a>
         </div>
+
+        {/* Social Icons */}
+        <div className="flex justify-center gap-16 mt-14">
+          <a
+            href="https://www.linkedin.com/in/qudsiyashaikh"
+            target="_blank"
+            className="hover:scale-125 transition"
+          >
+            <LiaLinkedinIn className="text-4xl text-[#0A66C2]" />
+          </a>
+
+          <a
+            href="https://github.com/qudsiyashaikh"
+            target="_blank"
+            className="hover:scale-125 transition"
+          >
+            <RxGithubLogo className="text-4xl text-white" />
+          </a>
+        </div>
+         {/* Divider */}
+      <div className="text-center text-purple-400 text-xl tracking-[10px] mt-10">
+        ••••••••••
       </div>
-      <hr className=' bg-slate-400 ' />
+      </section>
     </>
-  )
+  );
 }
 
-export default Home
+export default HomeSection;
