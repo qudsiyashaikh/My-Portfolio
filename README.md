@@ -1,12 +1,43 @@
-# React + Vite
+# 💼 Qudsiya ZamZam – Frontend Developer Portfolio
+Welcome to my personal developer portfolio built with **React.js**. This project is a reflection of my skills, learning journey, and dedication as a frontend developer. It highlights real-world projects, modern UI/UX principles, and my ability to write clean, maintainable code.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌐 Live Demo
 
-Currently, two official plugins are available:
+🚀 [Visit Portfolio Website]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+![Screenshot 2025-05-16 212931](https://github.com/user-attachments/assets/64f4e025-5241-4994-9a93-f5131c4ca6be)
 
-## Expanding the ESLint configuration
+## 🧑‍💻 About Me
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+I'm a frontend developer passionate about crafting user-focused, responsive web applications using **React.js**, **JavaScript**, **HTML5**, and **CSS3**. My strengths lie in clean design, performance optimization, and component-based architecture.
+
+This portfolio serves as a central hub to:
+- View my **best projects**
+- Download my **resume**
+- Explore my **tech stack**
+- Connect with me on **GitHub** and **LinkedIn**
+
+---
+
+## 🚀 Key Highlights
+
+- 🔹 Fully responsive design – mobile & desktop ready  
+- 🔹 Built with **React functional components** & `useState`/`useEffect`  
+- 🔹 Live previews of real projects with links to GitHub repos  
+- 🔹 Simple, clean, and modern design using **Tailwind CSS**  
+- 🔹 Modular codebase with reusable components  
+- 🔹 Hosted on **Vercel** with continuous deployment
+
+---
+
+## 🛠️ Tech Stack
+
+- **React.js** – UI library for component-based architecture  
+- **JavaScript (ES6+)** – Logic and interactivity  
+- **Tailwind CSS / CSS3** – Responsive design & styling  
+- **Git & GitHub** – Version control  
+- **Vercel** – Hosting and deployment  
+- **Figma** (for UI planning)  
+
+---
