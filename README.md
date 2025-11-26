@@ -5,8 +5,6 @@ Welcome to my personal developer portfolio built with **React.js**. This project
 
 🚀 [Visit Portfolio Website]
 
----
-![myportfolioimg.png](https://github.com/user-attachments/assets/64f4e025-5241-4994-9a93-f5131c4ca6be)
 
 ## 🧑‍💻 About Me
 
