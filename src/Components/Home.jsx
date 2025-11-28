@@ -43,7 +43,7 @@ function HomeSection() {
 
           <a
             href="#contact"
-            className="border-2 border-purple-500 text-purple-300 px-8 py-4 rounded-xl text-lg font-medium hover:bg-purple-600 hover:text-white transition"
+            className="border-2 border-purple-500 text-purple-300 px-4 py-3 rounded-xl text-lg font-medium hover:bg-purple-600 hover:text-white transition"
           >
             Get In Touch
           </a>
