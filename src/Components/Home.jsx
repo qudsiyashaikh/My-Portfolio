@@ -36,7 +36,7 @@ function HomeSection() {
           <a
             href="/myresume.docx"
             download
-            className="bg-purple-600 text-white px-8 py-4 rounded-xl text-lg font-medium shadow-lg hover:bg-purple-700 transition"
+            className="bg-purple-600 text-white px-4 py-3 rounded-xl text-lg font-medium shadow-lg hover:bg-purple-700 transition"
           >
             Download Resume
           </a>
